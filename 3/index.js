@@ -3,6 +3,7 @@ const fruits = ["사과", "바나나", "오렌지", "포도"];
 
 function hasFruit(fruitArray, targetFruit) {
   // 이곳에 코드를 작성합니다.
+  return fruitArray.includes(targetFruit);
 }
 
 console.log(hasFruit(fruits, "바나나")); // true

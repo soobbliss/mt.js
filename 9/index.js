@@ -2,6 +2,8 @@
 
 function calculateDiscountPrice(originalPrice, discountPercent) {
   // 이곳에 코드를 작성합니다.
+  const discountRate = 1 - discountPercent / 100;
+  return Math.round(originalPrice * discountRate);
 }
 
 console.log(calculateDiscountPrice(10000, 20)); // 8000이 출력되어야 함

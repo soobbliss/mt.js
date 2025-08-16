@@ -3,6 +3,19 @@
 function countWords(sentence) {
   // 이곳에 코드를 작성합니다.
   // 결과는 객체 형태로 반환: {단어: 빈도수}
+  const fruitArr = sentence.split(" ");
+
+  let voteCounter = {};
+
+  for (let fruit of fruitArr) {
+    if (fruit in voteCounter) {
+      voteCounter[fruit] += 1;
+    } else {
+      voteCounter[fruit] = 1;
+    }
+  }
+
+  return voteCounter;
 }
 
 console.log(countWords("사과 바나나 사과 오렌지 바나나 사과"));
